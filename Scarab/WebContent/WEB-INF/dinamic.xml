@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context 
+	   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 	
+      
+    <bean id="tagDao" class="it.er.tag.TagDAOBean" destroy-method="close" init-method="start">
+    	<property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>   
+     
+     <!-- 
+    <bean id="xDao" class="it.er.service.XDaoBean" destroy-method="close" init-method="start">
+    	<property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>  -->
+       
+    <bean id="sidebar" class="it.er.service.SideBarBean" destroy-method="close" init-method="start">
+ 		
+ 		<property name="sidebarxmlpath" value="/XML/xml/sidebar.xml"/>
+ 		<property name="friendsxmlpath" value="/XML/xml/amici.xml"/>
+ 		<!-- <property name="novita" ref="novitaDao" /> -->
+ 		<property name="xtag" ref="tagDao" />
+ 	</bean>
+ 	
+ 	<bean id="genericScarabLang" class="it.er.lang.LanguageGenericManageBean">
+ 		<property name="genericFilePath" value="${catalina.base}"></property>
+ 	</bean>
+ 	
+ 	<bean id="scarabNavigationAdmin" class="it.er.manage.admin.navigation.NavigationGenericManageBean">
+ 		<property name="genericFilePath" value="${catalina.base}"></property>
+ 	</bean>
+
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adminMenu>
+	<rootnav defaulttag="a">
+		<userlang name="languages" mounting="true" defaulttag="childs">
+			<langset action="changelang" id="1" method="post" class="sc-adm-lang-form" texttype="div" elements="ul">novalue</langset>
+		</userlang>
+		<useraction name="account" mounting="true" defaulttag="form" loginrequired="true">
+			<exit basepath="/app/userfe" action="logout" id="0" method="post" type="submit" class="sc-adm-account-form">exit</exit>
+		</useraction>
+		<administrator name="start" mounting="true" loginrequired="true">
+			<init href="init" id="0">initsite</init>
+		</administrator>
+		<users name="users" mounting="true" loginrequired="true">
+			<registration href="registration" class="red" id="0">registration</registration>
+		</users>
+		<navigation name="navigation" mounting="true" loginrequired="true">
+			<csidebar href="createsidebar" id="0">createsidebar</csidebar>
+			<msidebar href="modifysidebar" id="1">modifysidebar</msidebar>
+			<ctlsidebar href="controlsidebar" id="2">controlsidebar</ctlsidebar>
+		</navigation>
+		<content name="content" mounting="true" loginrequired="true" >
+			<newarticle href="newtext" id="0">newtext</newarticle>
+			<modarticle href="modtext" id="1">modtext</modarticle>
+			<newseries href="newseries" id="2">newseries</newseries>
+		</content>
+		<languages name="languages" mounting="true" loginrequired="true" >
+			<loverview href="langoverview" id="0">loverview</loverview>
+		</languages>
+	</rootnav>
+</adminMenu>

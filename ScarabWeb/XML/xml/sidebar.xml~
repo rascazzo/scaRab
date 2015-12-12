@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Gli id devono essesre unici per ogni livello
+	e i tag di qualsiasi livello devono essere unici -->
+<sidebar lang="it">
+	
+	
+	<about id="1" lang="en">
+		<profilo rel="tag" id="1" dao="novita" changefreq="weekly" lastmod="2014-03-08" priority="2" lang="it">il mio profilo web</profilo>
+	</about>	
+	<startwith id="2" lang="en">
+		<classi rel="tag" id="1" dao="novita" changefreq="weekly" lastmod="2014-03-08" priority="3" lang="it">panoramica sulle classi</classi>
+		<RESTful rel="tag" id="2" dao="novita" changefreq="weekly" lastmod="2014-06-18" priority="2" lang="it">Hai mai scritto un web service RestFul?</RESTful>
+	</startwith>
+	<ER id="3" lang="it">
+		<portfolio id="1" dao="novita" changefreq="weekly" lastmod="2014-11-25" priority="1" lang="it">portfolio</portfolio>
+		<tools id="2" dao="novita" changefreq="weekly" lastmod="2014-11-25" priority="1" lang="en">web tools and utility</tools>
+	</ER>
+	
+		
+</sidebar>

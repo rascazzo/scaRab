@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multilanguage>
+	<lang type="en" suffix="en_GB">
+		<site>
+			<novalue>novalue</novalue>
+			<languages>Languages</languages>
+		</site>
+		<adminmenu>
+			<registration>Registration</registration>
+			<loginadmin>Login</loginadmin>
+			<exit>Logout</exit>
+			<initsite>Start with new site</initsite>
+			<start>Start</start>
+			<users>Users</users>
+			<account>Account</account>
+			<navigation>Menu</navigation>
+			<modifysidebar>Sidebar modify</modifysidebar>
+			<createsidebar>Create sidebar</createsidebar>
+			<newtext>New Text Content</newtext>
+			<modtext>Text Content Modify</modtext>
+			<content>Contents</content>
+			<loverview>Overview</loverview>
+			<languages>Lang</languages>
+			<newseries>New Specific Text</newseries>
+			<controlsidebar>Sidebar Controls</controlsidebar>
+		</adminmenu>
+		<labels>
+			<username>Username</username>
+			<sidebartagname>Sidebar Tagname</sidebartagname>
+			<sidebar>Sidebar</sidebar>
+			<sidebartagvalue>Sidebar Tagvalue</sidebartagvalue>
+			<site>Site</site>
+			<firstlevel>First level of</firstlevel>
+			<secondlevel>Secondo level of</secondlevel>
+			<grouped>Grouped</grouped>
+			<attributename>Attribute name</attributename>
+			<attributevalue>Attribute value</attributevalue>
+			<views>View</views>
+			<saveall>Save All</saveall>
+			<savetag>Save Tag</savetag>
+			<deleteattribute>Delete Attribute</deleteattribute>
+			<addattribute>Add Attribute</addattribute>
+			<modattribute>Modify Attribute</modattribute>
+			<addTgn>Add Tagname</addTgn>
+			<numorder>Id</numorder>
+			<newtext>New Text Content</newtext>
+			<title>Title</title>
+			<subtitle>Subtitle</subtitle>
+			<archive>Archive</archive>
+			<language>Language</language>
+			<documenttype>Document Type</documenttype>
+			<serietitle>Base Document title</serietitle>
+			<seriesubtitle>Base Document subtitle</seriesubtitle>
+			<menu>Menu</menu>
+			<info>Info</info>
+			<image>Image</image>
+			<author>Author</author>
+			<description>Description</description>
+			<keys>What's</keys>
+			<addtext>Add text</addtext>
+		</labels>
+		<validation>
+			<info>
+			
+			</info>
+			<warn>
+			
+			</warn>
+			<error>
+			
+			</error>
+		</validation>
+	</lang>
+	<lang type="it" suffix="it_IT">
+		<site>
+			<novalue>novalue</novalue>
+			<languages>Lingue</languages>
+		</site>
+		<adminmenu>
+			<registration>Registrazione</registration>
+			<loginadmin>Login</loginadmin>
+			<exit>Esci</exit>
+			<initsite>Inizia con un nuovo sito</initsite>
+			<start>Start</start>
+			<users>Utenti</users>
+			<account>Account</account>
+			<navigation>Menu</navigation>
+			<modifysidebar>Modifica sidebar</modifysidebar>
+			<createsidebar>Crea nuova sidebar</createsidebar>
+			<newtext>Nuovo Contenuto di Testo</newtext>
+			<modtext>Modifica Contenuto di Testo</modtext>
+			<content>Contenuti</content>
+			<loverview>Gestione</loverview>
+			<languages>Lang</languages>
+			<newseries>Nuovo Testo per Argomento</newseries>
+			<controlsidebar>Gestisci sidebar</controlsidebar>
+		</adminmenu>
+		<labels>
+			<username>User</username>
+			<sidebartagname>Sidebar Tagname</sidebartagname>
+			<sidebar>Sidebar</sidebar>
+			<sidebartagvalue>Sidebar Tagvalue</sidebartagvalue>
+			<site>Sito</site>
+			<firstlevel>Di primo livello</firstlevel>
+			<secondlevel>Di secondo livello</secondlevel>
+			<grouped>Raggruppamento</grouped>
+			<attributename>Nome attributo</attributename>
+			<attributevalue>Valore attributo</attributevalue>
+			<views>Visualizza</views>
+			<saveall>Salva tutto</saveall>
+			<savetag>Salva Tag</savetag>
+			<deleteattribute>Cancella Attributo</deleteattribute>
+			<addattribute>Aggiungi Attributo</addattribute>
+			<modattribute>Modifica Attributo</modattribute>
+			<addTgn>Aggiungi Tagname</addTgn>
+			<numorder>Id</numorder>
+			<newtext>Nuovo Contenuto di Testo</newtext>
+			<title>Titolo</title>
+			<archive>Archivio</archive>
+			<language>Lingua</language>
+			<documenttype>Tipo di Documento Base</documenttype>
+			<serietitle>Titolo del Documento base</serietitle>
+			<seriesubtitle>Sottotitolo del Documento base</seriesubtitle>
+			<menu>Menu</menu>
+			<info>Informazioni</info>
+			<image>Immagine</image>
+			<author>Autore</author>
+			<description>Descrizione</description>
+			<keys>Cosa?</keys>
+			<addtext>Inserisci Testo</addtext>
+		</labels>
+		<validation>
+			<info>
+			
+			</info>
+			<warn>
+			
+			</warn>
+			<error>
+			
+			</error>
+		</validation>
+	</lang>
+</multilanguage>
