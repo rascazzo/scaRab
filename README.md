@@ -15,6 +15,4 @@ However, the xml currently workable by scarab for the front-end is served and vi
 
 How you use both MySQL DBMS that mongodb. Mongodb for contentui
 
-Enjoy with Scarab !!!
-
-
+Enjoy !!! :)
