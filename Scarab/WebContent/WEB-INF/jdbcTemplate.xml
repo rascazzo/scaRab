@@ -11,62 +11,16 @@
  	
 	
  	
- 	<!-- <bean id="jdbcTemplateEr" class="org.springframework.jdbc.core.JdbcTemplate">
-		<property name="dataSource" ref="erdataSource"/>
-	</bean>-->
-	
+
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ersourdataSource"/>
 	</bean>
- 	<!--  
- 	<bean id="quadroDao" class="it.er.dao.preversion.QuadroDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="acasatuaDao" class="it.er.dao.preversion.AcasatuaDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="cavallettoDao" class="it.er.dao.preversion.CavallettoDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="citazioneDao" class="it.er.dao.preversion.CitazioneDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="commentoDao" class="it.er.dao.preversion.CommentoDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="headerImgDao" class="it.er.dao.preversion.HeaderImgDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="motivoDao" class="it.er.dao.preversion.MotivoDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	
- 	<bean id="novitaDao" class="it.er.dao.preversion.NovitaDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	 -->
- 	<bean id="paramDao" class="it.er.dao.ParamDAO" destroy-method="close" init-method="start">
+	<bean id="paramDao" class="it.er.dao.ParamDAO" destroy-method="close" init-method="start">
  		<property name="jdbcTemplate" ref="jdbcTemplate" />
  	</bean>
- 	<!-- 
- 	<bean id="statDao" class="it.er.dao.preversion.StatDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
- 	 -->
- 	<bean id="accountDao" class="it.er.account.AccountDAO" destroy-method="close" init-method="start">
+	<bean id="accountDao" class="it.er.account.AccountDAO" destroy-method="close" init-method="start">
  		<property name="jdbcTemplate" ref="jdbcTemplate" />
  	</bean>
- 	<!-- 
- 	<bean id="htmlintDao" class="it.er.dao.preversion.HtmlInterpreterDAO" destroy-method="close" init-method="start">
- 		<property name="jdbcTemplate" ref="jdbcTemplateEr" />
- 	</bean>
-	 -->
-	
+ 	
  	
  </beans>
