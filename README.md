@@ -3,9 +3,9 @@ web app
 
 Hi,
 
-Scarab was designed and written by me, dev@emiliorascazzo.it, in order to make it easy to use java web application not only as a container for web pages, as well as lite CMS.But it provides a REST API as related to the CMS.
+Scarab was designed and written by me, dev@emiliorascazzo.it, in order to make it easy to use java web application not only as a container for web pages, as well as lite CMS.But it provides a REST API as related to the CMS. The administration back office side is not completed yet.
 
-Install and work is not complicated. It is a java project that needs Tomcat. I currently use the v 7 Tomcat. And as a 1.7 JVM. 
+Install and work is not complicated. But there are more steps. It is a java project that needs Tomcat. I currently use the v 7 Tomcat. And as a 1.7 JVM. 
 
 The directory /Scarab contains src of the Scarab project java. Required libraries are available through the installation of Maven.
 
