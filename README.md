@@ -1,5 +1,5 @@
 # scarab
-web app
+web app writed in Java 1.7. lite CMS engine. text content and dynamic navigation manage 
 
 Hi,
 
