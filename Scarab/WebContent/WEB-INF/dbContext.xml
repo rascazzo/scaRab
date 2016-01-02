@@ -12,7 +12,8 @@
     <bean  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
   		<property name="locations">
   			<list> 
-  				<value>file:${user.home}/your.properties</value>			</list>
+  				<value>file:${user.home}/.run/Apps/scarab.properties</value>
+  				<!-- <value>file:${user.home}/your.properties</value>-->			</list>
 		</property>	
 	</bean>
 
