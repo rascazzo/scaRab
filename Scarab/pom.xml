@@ -310,14 +310,14 @@
   		<version>3.0.0</version>
   		<scope>provided</scope>
   	</dependency>
-  		<dependency>
+  	<dependency>
   		<groupId>org.bson</groupId>
   		<artifactId>bson</artifactId>
   		<version>3.0.0</version>
   		<scope>provided</scope>
   	</dependency>
   	<dependency>
-  		<groupId>it.er.xrab</groupId>
+  		<groupId>xrab</groupId>
   		<artifactId>xrab</artifactId>
   		<version>1.0</version>
   		<scope>provided</scope>
