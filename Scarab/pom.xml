@@ -277,5 +277,45 @@
   		<version>2.2.1.1</version>
   		<scope>provided</scope>
   	</dependency>
+  	
+  	<!-- tun -->
+  	
+  	<dependency>
+  		<groupId>com.mysql.jdbc</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.9-bin</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.gjt.mm.mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.9-bin</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mongodb</groupId>
+  		<artifactId>mongodb-driver-core</artifactId>
+  		<version>3.0.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.mongodb</groupId>
+  		<artifactId>mongodb-driver</artifactId>
+  		<version>3.0.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.bson</groupId>
+  		<artifactId>mongodb-driver</artifactId>
+  		<version>3.0.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+  		<dependency>
+  		<groupId>org.bson</groupId>
+  		<artifactId>bson</artifactId>
+  		<version>3.0.0</version>
+  		<scope>provided</scope>
+  	</dependency>
+
   </dependencies>
 </project>
