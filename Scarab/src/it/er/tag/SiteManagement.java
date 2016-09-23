@@ -119,5 +119,18 @@ public class SiteManagement extends Basic implements InitializingBean,SiteAccess
 		} else 
 			return null;
 	}
+
+
+	@Override
+	public boolean reloadAllSites() {
+		try {
+			this.afterPropertiesSet();
+			return true;
+		} catch (Exception e){
+			return false;
+		}
+	}
+	
+	
 	
 }

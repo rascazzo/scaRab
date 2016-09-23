@@ -16,4 +16,6 @@ public interface SiteAccess {
 	public List<Site> getAllSite() throws Exception;
 	
 	public Object containsAndGetObject(Map<Site, ? extends Object> map, Site s ) throws Exception;
+	
+	public boolean reloadAllSites();
 }

@@ -507,7 +507,7 @@ public class AdminContentManage extends BaseManage{
 			} else {
 				site.saveSite(s);
 			}
-				
+			siteManagement.reloadAllSites();	
 			site.getTransactionManager().commit(status);
 		} catch (Exception e){
 			log.error("error in create site and superUser",e);
