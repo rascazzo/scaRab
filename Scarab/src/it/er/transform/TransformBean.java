@@ -6,10 +6,7 @@ import it.er.dao.IParamDAO;
 import it.er.dao.ISiteDAO;
 import it.er.dao.Param;
 import it.er.dao.Site;
-import it.er.xrab.ResolverRab;
-import it.er.xrab.XRabProcExec;
-import it.er.xrab.XRabResolver;
-import it.er.xrab.XRabTransformer;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -189,21 +186,21 @@ public class TransformBean extends Basic implements Transform,InitializingBean{
 	@Override
 	public void doXRabProcessing(String XRab, Map<String, String> xmlParam,
 			OutputStream out, Ofelia xml, Class<?> type) throws IOException {
-		InputStream xrab = new FileInputStream(webContentPath+XRab);
-		InputStream xmlSource = new ByteArrayInputStream(xml.writeTo(xml, type).toByteArray());
-		try {
-			XRabResolver r = new ResolverRab(webContentPath);
-			XRabTransformer xrabElab = it.er.xrab.XRab.newIstance(); 
-			xrabElab.setURIResolver(r);
-			XRabProcExec proc = it.er.xrab.XRab.newTrasform(xrabElab, new StreamSource(xrab));
-			proc.transform(new StreamSource(xmlSource), new StreamResult(out));
-			} catch (Exception e){
-			out.write(e.getMessage().getBytes());
-			log.error("Error in XRAB transform", e.getCause());
-		} finally {
-			xrab.close();
-			xmlSource.close();
-		}
+//		InputStream xrab = new FileInputStream(webContentPath+XRab);
+//		InputStream xmlSource = new ByteArrayInputStream(xml.writeTo(xml, type).toByteArray());
+//		try {
+//			XRabResolver r = new ResolverRab(webContentPath);
+//			XRabTransformer xrabElab = it.er.xrab.XRab.newIstance(); 
+//			xrabElab.setURIResolver(r);
+//			XRabProcExec proc = it.er.xrab.XRab.newTrasform(xrabElab, new StreamSource(xrab));
+//			proc.transform(new StreamSource(xmlSource), new StreamResult(out));
+//			} catch (Exception e){
+//			out.write(e.getMessage().getBytes());
+//			log.error("Error in XRAB transform", e.getCause());
+//		} finally {
+//			xrab.close();
+//			xmlSource.close();
+//		}
 	}
 	
 	
