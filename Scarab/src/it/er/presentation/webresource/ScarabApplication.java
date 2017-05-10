@@ -16,15 +16,15 @@ public class ScarabApplication extends Application{
 	public Set<Class<?>> getClasses() {
 		Set<Class<?>> classes = new HashSet<Class<?>>();
         classes.add(WebContent.class);
-        classes.add(WebContentOut.class);
+        //classes.add(WebContentOut.class);
 		classes.add(AdminContent.class);
         classes.add(Sd.class);
-        classes.add(SdOut.class);
+        //classes.add(SdOut.class);
 		classes.add(User.class);
 		
 		classes.add(RestAdminContent.class);
 		classes.add(SidebarRestLayer.class);
-		classes.add(RestGraphContent.class);
+		//classes.add(RestGraphContent.class);
 		return classes;
 	}
 
