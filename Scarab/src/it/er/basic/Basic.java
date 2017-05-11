@@ -24,7 +24,7 @@ public abstract class Basic{
 	protected ISiteDAO site;
 	
 	@Autowired
-	public void setSite(SiteDAO site){
+	public void setSite(ISiteDAO site){
 		this.site = site;
 	}
 	

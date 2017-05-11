@@ -13,15 +13,15 @@ import java.util.Map;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.bson.Document;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
+
+
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoDatabase;
 
-public abstract class BaseNoSql extends Basic implements InitializingBean{
+public class BaseNoSql extends Basic {
 
 	private static final Logger log = LogManager.getLogger(BaseNoSql.class);
 	
@@ -31,7 +31,7 @@ public abstract class BaseNoSql extends Basic implements InitializingBean{
 	
 	private String mdbName = null;
 	
-	private MdbServiceNSParam mdbServiceParam = null;
+	protected MdbServiceNSParam mdbServiceParam = null;
 
 	public MongoDatabase getMdbDatabase() {
 		return mdbDatabase;
@@ -55,22 +55,19 @@ public abstract class BaseNoSql extends Basic implements InitializingBean{
 		return mdbServiceParam;
 	}
 
-	@Autowired
-	public void setMdbServiceParam(MdbServiceNSParam mdbServiceParam) {
-		this.mdbServiceParam = mdbServiceParam;
-	}
 	
-	@Override
-	public void afterPropertiesSet() throws Exception {
+	public void propSet() throws Exception {
 		/**
 		 * implemented only ipv4
 		 */
 		String ip = mdbServiceParam.getMdbServiceNSParamMap().get("mdbIP");
 		String[] ipArr = ip.split("\\.");
-		/*InetAddress inet = InetAddress.getByAddress(new byte[]{((byte) ((Integer.parseInt(ipArr[0]) & 0xFF000000) >> 24)),
+	/*	InetAddress inet = InetAddress.getByAddress(new byte[]{((byte) ((Integer.parseInt(ipArr[0]) & 0xFF000000) >> 24)),
 				((byte) ((Integer.parseInt(ipArr[1]) & 0x00FF0000) >> 16)),
 				((byte) ((Integer.parseInt(ipArr[2]) & 0x0000FF00) >> 8)),
 				((byte) ((Integer.parseInt(ipArr[3]) & 0x000000FF) >> 0))});*/
+		/*
+
 		long asLong = 0;
 		byte[] b = new byte[ipArr.length];
 		for (int i = 0; i < ipArr.length; i++){
@@ -79,17 +76,18 @@ public abstract class BaseNoSql extends Basic implements InitializingBean{
 		}
 		
 		InetAddress inet = InetAddress.getByAddress(b);
-		
+	
 		MongoCredential mongoCred = MongoCredential.createCredential(this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbUser"),
 				this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbName"),
 				this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbPassword").toCharArray());
 		List<MongoCredential> lCredMongo = new LinkedList<MongoCredential>();
 		lCredMongo.add(mongoCred);
-		List<ServerAddress> seed = new ArrayList<ServerAddress>();
-		seed.add(new ServerAddress(ip, Integer.parseInt(this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbPort"))));
-		this.mdbClient = new MongoClient(seed,
-				lCredMongo);
-
+		log.info("Mongodb port:" +this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbPort"));	
+		log.info("Mongodb IP:" + inet.getHostAddress());		
+	
+		ServerAddress seed =  new ServerAddress(inet, Integer.parseInt(this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbPort")));
+*/		this.mdbClient = new MongoClient(mdbServiceParam.getMdbServiceNSParamMap().get("mdbIP"),Integer.parseInt(this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbPort")));
+		
 		this.mdbDatabase = this.mdbClient.getDatabase(this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbName"));
 		this.mdbName = this.mdbServiceParam.getMdbServiceNSParamMap().get("mdbName");
 	}

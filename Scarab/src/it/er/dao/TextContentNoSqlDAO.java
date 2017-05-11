@@ -19,9 +19,12 @@ import com.mongodb.client.MongoCursor;
 
 import it.er.basic.BaseNoSql;
 import it.er.object.Metatag;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Repository("textContentNoSql")
-public class TextContentNoSqlDAO extends BaseNoSql implements TextContent{
+
+@Repository("textContent")
+public class TextContentNoSqlDAO extends BaseNoSql implements TextContent,InitializingBean{
 	
 	private static final int noLimit = -1;
 	
@@ -32,6 +35,16 @@ public class TextContentNoSqlDAO extends BaseNoSql implements TextContent{
 	}
 
 	private static final Logger log = LogManager.getLogger(TextContentNoSqlDAO.class);
+
+	@Autowired
+        public void setMdbServiceParam(MdbServiceNSParam mdbServiceParam) {
+                this.mdbServiceParam = mdbServiceParam;
+        }
+
+        @Override
+        public void afterPropertiesSet() throws Exception {
+		super.propSet();
+	}
 
 	@Override
 	public int insert(Text t,String lang, Metatag meta) throws Exception {

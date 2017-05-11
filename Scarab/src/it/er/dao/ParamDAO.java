@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository("param")
-public class ParamDAO extends Basic implements IParamDAO,it.er.dinamic.RepresentedHappyService{
+public class ParamDAO extends Basic implements IParamDAO{
 	@Autowired
 	private JdbcTemplate jdbcTemplate = null;
 	
@@ -46,37 +46,7 @@ public class ParamDAO extends Basic implements IParamDAO,it.er.dinamic.Represent
 		return p;
 	}
 
-	@Override
-	public int create(Object i) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int read(Object i, Object o) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int read(Object i, Object o, int start, int limit)
-			throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int update(Object o) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int delete(Object o) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	
 	@Override
 	public List<Param> getParamList(String name) throws SQLException {
 		String sql = "SELECT * FROM param WHERE name=?";

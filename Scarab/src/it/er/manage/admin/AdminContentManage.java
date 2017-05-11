@@ -150,16 +150,16 @@ public class AdminContentManage extends BaseManage{
 		return site;
 	}
 
-	private TextContent textContentNoSql;
+	private TextContent textContent;
 	
 	
 
-	public TextContent getTextContentNoSql() {
-		return textContentNoSql;
+	public TextContent getTextContent() {
+		return textContent;
 	}
 	@Autowired
-	public void setTextContentNoSql(TextContent textContentNoSql) {
-		this.textContentNoSql = textContentNoSql;
+	public void setTextContent(TextContent textContent) {
+		this.textContent = textContent;
 	}
 
 	public AdminLayer initAdmin(HttpServletRequest req,
@@ -554,7 +554,7 @@ public class AdminContentManage extends BaseManage{
 		int r = 0;
 		try {
 			t.cleanArgument();
-			r = textContentNoSql.insert(t,lang,meta);
+			r = textContent.insert(t,lang,meta);
 		} catch (Exception e){
 			log.error(e.getMessage(),e);
 			r = 0;
@@ -604,7 +604,7 @@ public class AdminContentManage extends BaseManage{
 		int r = 0;
 		
 		try {
-			r = textContentNoSql.insertSeries(ts,colName,lang,meta);
+			r = textContent.insertSeries(ts,colName,lang,meta);
 		} catch (Exception e){
 			log.error(e.getMessage(),e);
 			r = 0;
