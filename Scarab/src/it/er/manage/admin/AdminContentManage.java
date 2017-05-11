@@ -7,6 +7,7 @@ import it.er.account.Role;
 import it.er.basic.Basic;
 import it.er.dao.IParamDAO;
 import it.er.dao.ISiteDAO;
+import it.er.dao.SiteDAO;
 import it.er.dao.Site;
 import it.er.dao.Text;
 import it.er.dao.TextContent;
@@ -146,7 +147,7 @@ public class AdminContentManage extends BaseManage{
 		return account;
 	}
 
-	public ISiteDAO getSite() {
+	public SiteDAO getSite() {
 		return site;
 	}
 
@@ -702,7 +703,7 @@ public class AdminContentManage extends BaseManage{
 		this.account = account;
 	}
 	@Autowired
-	public void setSite(ISiteDAO site) {
+	public void setSite(SiteDAO site) {
 		this.site = site;
 	}
 

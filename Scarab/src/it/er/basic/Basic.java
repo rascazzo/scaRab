@@ -19,23 +19,21 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public abstract class Basic{
-	
-	protected ISiteDAO site;
-	
+public abstract class Basic {
+	protected SiteDAO site;	
+
 	@Autowired
-	public void setSite(ISiteDAO site){
+	public void setSite(SiteDAO site){
 		this.site = site;
 	}
-	
-	
-	public ISiteDAO getSite() {
-		return this.site;
-	}
+
+
+
+
 
 	public Basic(){}
 	
-	private static final String scarabSeparatorFile = "#f";
+	public static final String scarabSeparatorFile = "#f";
 
 	private static final String paramAdminAppName = "adminApp";
 	
@@ -47,9 +45,9 @@ public abstract class Basic{
 	
 	private static final String XSLTPath = Basic.scarabSeparatorFile+"Xslt"+Basic.scarabSeparatorFile;
 	
-	private static final String XSLTAdminPath = Basic.scarabSeparatorFile+"admin"+Basic.scarabSeparatorFile+"Xslt"+Basic.scarabSeparatorFile;
+	public static final String XSLTAdminPath = Basic.scarabSeparatorFile+"admin"+Basic.scarabSeparatorFile+"Xslt"+Basic.scarabSeparatorFile;
 	
-	private static final String XRABAdminPath = Basic.scarabSeparatorFile+"admin"+Basic.scarabSeparatorFile+"XProc"+Basic.scarabSeparatorFile;
+	public static final String XRABAdminPath = Basic.scarabSeparatorFile+"admin"+Basic.scarabSeparatorFile+"XProc"+Basic.scarabSeparatorFile;
 	
 	private static final String webContentPath = "WebContentPath";
 	
@@ -67,9 +65,9 @@ public abstract class Basic{
 	
 	private static final String layerServiceBean = "layerservice.xml";
 	
-	private static final String errorPage = "/er/contentstk/error/error";
+	public static final String errorPage = "/er/contentstk/error/error";
 	
-	private static final String notFoundPage = "/er/contentstk/error/notfound";
+	public static final String notFoundPage = "/er/contentstk/error/notfound";
 
 	public static String getLayerServiceBeanFinal() {
 		return layerServiceBean;
@@ -152,8 +150,8 @@ public abstract class Basic{
 	
 	public String getXSLTPath(String file,String domain,ServletContext sc){
 		String r = null;
-		if (site == null)
-			site = SingletonLookup.getSiteDAO(sc);
+		if (this.site == null){
+			ISiteDAO site = SingletonLookup.getSiteDAO(sc);
 			try {
 				String xsl = site.readSite(domain).getXsltpath();
 				if (xsl != null && !xsl.isEmpty())
@@ -162,6 +160,7 @@ public abstract class Basic{
 			} catch (SQLException e) {
 				r = getXSLTPath(file);
 			}
+		 }
 		return r;
 	}
 	

@@ -19,6 +19,7 @@ import it.er.account.IAccount;
 import it.er.basic.BaseNoSql;
 import it.er.dao.IParamDAO;
 import it.er.dao.ISiteDAO;
+import it.er.dao.SiteDAO;
 import it.er.dao.Site;
 import it.er.dao.Text;
 import it.er.dao.TextContent;
@@ -84,7 +85,7 @@ public class SdManage extends BaseManage{
 		return account;
 	}
 
-	public ISiteDAO getSite() {
+	public SiteDAO getSite() {
 		return site;
 	}
 	

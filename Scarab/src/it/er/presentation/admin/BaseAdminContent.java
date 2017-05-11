@@ -4,11 +4,11 @@ import java.util.List;
 
 import it.er.basic.Basic;
 import it.er.object.Logged;
-
+import java.io.File;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 
-public abstract class BaseAdminContent extends Basic{
+public class BaseAdminContent {
 
 	protected static final String appBasePath = "app";
 	
@@ -62,5 +62,20 @@ public abstract class BaseAdminContent extends Basic{
 		return BaseAdminContent.restPath;
 	}
 	
+public static String getXsltadminpath(String file){
+                return Basic.XSLTAdminPath.replaceAll(Basic.scarabSeparatorFile, File.separatorChar+"")+file;
+        }
+
+        public static String getXRabadminPath(String file){
+                return Basic.XRABAdminPath.replaceAll(Basic.scarabSeparatorFile, File.separatorChar+"")+file;
+        }
+ public static String getErrorpage() {
+                return Basic.errorPage;
+        }
+
+
+        public static String getNotfoundpage() {
+                return Basic.notFoundPage;
+        }
 	
 }

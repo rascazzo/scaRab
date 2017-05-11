@@ -17,6 +17,7 @@ import it.er.account.IAccount;
 import it.er.basic.Basic;
 import it.er.dao.IParamDAO;
 import it.er.dao.ISiteDAO;
+import it.er.dao.SiteDAO;
 import it.er.dao.Site;
 import it.er.dao.Text;
 import it.er.dao.TextContent;
@@ -96,7 +97,7 @@ public class WebContentManage extends BaseManage{
 		return account;
 	}
 
-	public ISiteDAO getSite() {
+	public SiteDAO getSite() {
 		return site;
 	}
 	
@@ -214,8 +215,8 @@ public class WebContentManage extends BaseManage{
 				String host = "";
 				String tit = "";
 				try {
-					 if (site == null){
-						 site = SingletonLookup.getSiteDAO(cx);
+					 if (this.site == null){
+						 ISiteDAO site = SingletonLookup.getSiteDAO(cx);
 					 }
 					 host = getSite().readSite(req.getServerName()).getDomain();
 					 tit = getSite().readSite(req.getServerName()).getTitle();
@@ -256,8 +257,8 @@ public class WebContentManage extends BaseManage{
 		sidebar = SingletonLookup.getSideBarX(cx);
 		try {
 			 
-			 if (site == null){
-				 site = SingletonLookup.getSiteDAO(cx);
+			 if (this.site == null){
+				 ISiteDAO site = SingletonLookup.getSiteDAO(cx);
 			 }
 			 host = getSite().readSite(req.getServerName()).getDomain();
 		

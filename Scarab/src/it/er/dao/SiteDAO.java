@@ -24,25 +24,25 @@ public class SiteDAO implements ISiteDAO,Serializable {
 	 */
 	private static final long serialVersionUID = 7766017102398203358L;
 
-	@Autowired
+
 	private JdbcTemplate jdbcTemplate = null;
-	@Autowired
+
 	private PlatformTransactionManager transactionManager;
 	
 	private static Logger log = LogManager.getLogger(SiteDAO.class);
 	
 	public SiteDAO(){}
-	
+	@Override
 	public PlatformTransactionManager getTransactionManager() {
 		return transactionManager;
 	}
 
-	
+	@Autowired
 	public void setTransactionManager(PlatformTransactionManager transactionManager) {
 		this.transactionManager = transactionManager;
 	}
 
-	
+	@Autowired
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate){
 		this.jdbcTemplate = jdbcTemplate;
 	}
