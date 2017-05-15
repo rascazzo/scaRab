@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<xsl:variable name="basePath" select="'/Scarab'"/>
+
 <xsl:template match="*" mode="writeTag">
 	<xsl:param name="context"></xsl:param>
 	<xsl:param name="element" select="."/>
 	<xsl:param name="pos" select="position()"></xsl:param>
+	
 	<xsl:element name="{$element}">
-		<xsl:apply-templates select="../../attrs/tagAttr[(@id + 1) =  $pos]/attributes" />
+		<xsl:apply-templates select="../../attrs/tagAttr[(@id + 1) =  $pos]/attributes" >
+	
+		</xsl:apply-templates>
 	</xsl:element>
 	
 </xsl:template>
@@ -69,9 +74,10 @@
 </xsl:template>
 
 <xsl:template match="attributes">
-	<xsl:param name="value" select="./value"></xsl:param>
+	<xsl:param name="value" select="concat($basePath,'/',./value)"></xsl:param>
 	<xsl:param name="name" select="./name"></xsl:param>
 	<xsl:param name="queryForGet"></xsl:param>
+
 	<xsl:attribute name="{$name}">
 		<xsl:choose>
 			<xsl:when test="$name = 'href'">
@@ -79,6 +85,7 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$value"></xsl:value-of>
+
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:attribute>

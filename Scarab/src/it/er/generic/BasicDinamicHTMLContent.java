@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 public abstract class BasicDinamicHTMLContent {
 	protected Integer tag_idx = 0;
 	
-	
+	protected static final String outw = "outw?=webfile"; 	
 	
 	protected List<AttributeTagHTML> tagAttr;
 

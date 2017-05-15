@@ -1,0 +1,427 @@
+/*
+	   scarab_admin.css
+	   ScarabWEB
+			   Created by fabry on 2015-07-25.
+	   Copyright 2015 fabry. All rights reserved.
+	*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;	
+	border: none;
+	font-size: 101.3%;
+}
+
+#ad-y-menu #ad-y-menu-c{
+	display: none;
+}
+
+html{
+	
+}
+
+body{
+	
+	/*background-color: #0F0617;*/
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #FF9933;
+}
+/*
+ * 
+ */
+.ad-er-scarab-logo{
+	margin: 0 1.5em;
+	padding: 1.5em;
+	width: 3%;
+	float: left;
+}
+
+.ad-er-main-second-wrap{
+	width: 70%; 
+	/*background: #0F0617;*/
+	float:left;
+}
+/*
+ * Menu
+ */
+.sc-main-title{
+	font-size: 74pt; 
+}
+
+.sc-main-title:hover{
+	color: #888888;
+}
+
+.sc-main-title-cont{
+	float: left;
+	width: 10%;
+}
+
+#ad-er-admin-container{
+	width: 100%;
+	float: left;
+}
+
+#main-panel{
+	width: 70%;
+	background-color: #FFF;
+	height: 500px;
+	float: left;
+	padding: 0 1em 0 1em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#main-nav-panel{
+	width: 30%;
+	float: right;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#ad-er-wrap{
+	width: 100%;
+	/*background-color: #AFC9CE;*/
+	margin: 0 auto;
+}
+
+.ad-er-two-content{
+	margin: 0.5em auto;
+	width: 90%;
+	float: left;
+}
+
+.ad-er-input-text{
+	margin: 0 0 0 2em;
+	width: 100%;
+}
+
+.label{
+	color: #888888;
+}
+
+.ad-er-input-text > .input-text-wrap > .label{
+	width: 50%;
+	text-align: right;
+	padding: 0 0.8em 0 0;
+}
+
+.ad-er-input-text > .input-text-wrap > .input{
+	width: 100%;
+	/*
+	border: 1px solid #0F0617;
+	border-radius: 0.8em;
+	-moz-border-radius: 0.8em;
+	*/
+}
+
+input[type='text'],input[type='password']{
+	
+	border-radius: 0.15em;
+	-moz-border-radius: 0.15em;
+	width: 100%;
+	/*background-color: #E5E3F3;*/
+	/*box-shadow:  0.1em 0 0.1em 0.1em #AAA;*/
+	border: 0.1em solid #E5E3F3;
+	font-size: 105%;
+	color: #996665;
+}	
+
+select{
+	
+	border-radius: 0.15em;
+	-moz-border-radius: 0.15em;
+	width: 100%;
+	/*background-color: #E5E3F3;*/
+	/*box-shadow:  0.1em 0 0.1em 0.1em #AAA;*/
+	font-size: 105%;
+}
+
+
+.input-text-wrap{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.sc-nav-single-group-list{
+	border: 0.1em solid #888888;
+	padding: 0.5em;
+	width: 90%;
+	margin: 0.5em auto;
+	float:left;
+}
+
+.sc-nav-single-group-label{
+	color: #888888;
+	float:left;
+	width: 100%;
+	font-size: 120%;
+}
+
+.sc-nav-single{
+	clear: both;
+	float:left;
+}
+
+.sc-nav-single > span{
+	color: #888888;
+}
+
+
+/*
+ * loginAdminForm
+ */
+#loginAdminForm{
+	border: 0.1em solid #888888;
+	min-height: 10em;
+	margin: 0 auto;
+	width: 90%;
+	border-radius: 0.8em;
+	-moz-border-radius: 0.8em;
+}
+
+.sc-adm-mn-lgn{
+	width: 100%;
+	float: left;
+	padding: 5em 0 0 0;
+}
+
+/*
+ *  general-yop-adm-panel
+ */
+.ad-pnl{
+	width: 100%;
+	float: left;
+}
+
+.ad-pnl #sc-ad-mnhmger{
+	float:left;
+}
+
+/*
+ * sc-main-panel form
+ */
+.sc-main-panel-title{
+	font-size: 110%;
+	font-style: italic;
+	color: #996665;
+}
+
+.sc-main-panel{
+	/*border: 0.1em solid #E5E3F3;*/
+	padding: 1em;
+	float: left;
+}
+
+.sc-main-panel.manage-sidebar,.sc-main-panel .manage-sidebar{
+	width: 100%;
+}
+
+.sc-main-panel.manage-sidebar button{
+	float: left;
+}
+
+.sc-main-panel .input-text-wrap-cl{
+	width: 100%;
+	padding: 0 1em;
+	clear: both;
+	float: left;
+}
+
+.sc-main-panel .input-text-wrap-cl .sc-label,.sc-main-panel .input-rdo-wrap-cl .sc-label{
+	font-weight: bold;
+	float: left;
+	padding: 0 0 0.5em 0;
+}
+
+.sc-main-panel .input-text-wrap-cl .sc-input{
+	float: left;
+	padding: 0 0.5em;
+}
+
+/*erica
+.sc-main-panel .sc-input{
+	background: url(/images/admin/fondo_campi.png) repeat;	
+}*/
+
+
+.sc-main-panel .input-slt-fl-r-wrap-cnt{
+	float:right;
+	width: 50%;
+}
+.sc-main-panel .input-select-fl-r-wrap{
+	width: 70%;
+	padding: 0 1em;
+	float: right;
+}
+
+.sc-main-panel .sc-ol-label-fl{
+	float:left;
+	width: 20%;
+}
+
+.sc-main-panel .sc-label-fl{
+	font-weight: bold;
+	float: left;
+	padding: 0 0 0.5em 0;
+}
+
+.sc-main-panel .input-select-fl-r-wrap .sc-input-no-fl{
+	padding: 0.5em 0 0 0;
+}
+
+.sc-main-panel .input-rdo-wrap-cl{
+	width: 100%;
+	padding: 1em 1em;
+	clear: both;
+	float: left;
+}
+
+.sc-main-panel .input-rdo-wrap-cl div{
+	padding: 0 0 0 0.5em;
+	float: left;
+}
+
+
+.sc-main-panel .input-rdo-wrap-cl input[type='radio']{
+	padding: 0 1em 0 1em;
+	float: left;
+}
+
+.sc-main-panel .table-wrap-cl{
+	width: 70%;
+	padding: 1em 1em;
+	clear: both;
+	float: left;
+}
+
+.sc-main-panel .table-wrap-cl .sc-attr-table{
+	border: 0.1em solid #E5E3F3;
+}
+
+.sc-main-panel .table-wrap-cl .sc-attr-table th {
+	background: #DDDDDD;
+}
+
+.sc-main-panel .table-wrap-cl .sc-attr-table *{
+	border: 0.1em solid #E5E3F3;
+	padding: 0.5em;
+	text-align: center;
+}
+
+table .sc-intbl-wdh3{
+	width: 30%
+}
+
+table .sc-intbl-wdh1{
+	width: 5%
+}
+
+.sc-main-panel .input-rdo-wrap-cl .sc-label{
+	border-right: 0.1em solid #E5E3F3;
+	padding: 0 0.5em 0 0.5em;
+}
+
+.sc-main-panel .input-butt-wrap-cl{
+	width: 33%;
+	padding: 0 1em;
+	clear: both;
+	float: left;
+	margin: 1.5em 0 0 0;
+}
+
+.sc-main-panel .input-butt-wrap-cl input{
+	font-weight: bold;
+	padding: 0.3em 0.3em;
+}
+
+
+.sc-main-panel .input-fl-r-wrap-cnt{
+	width: 20%;
+	float: right;
+}
+
+
+.sc-adm-lang-form{
+	
+}
+.sc-adm-lang-group-wrap{
+	float: left;
+	
+}
+.sc-adm-lang-item{
+	
+	float: left;
+}
+
+.sc-adm-lang-item-e{
+	padding: 0.3em 0.9em 0.3em 0;
+	height: 2em;
+	width: 2em;
+}
+
+.sc-adm-lang-group-ch-list{
+	float:left;
+}
+
+#sc-adm-messages{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 6em;
+	background-color: #222222;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */ 
+	color: #FFF;
+	display: none;
+}
+
+#sc-adm-messages .sc-adm-cont-msg {
+	margin: 0 auto;
+}
+
+/*
+ * Sidebar adm
+ */
+#createsidebarTNForm .input-slt-fl-r-wrap-cnt.tagnamerel,
+#createsidebarATForm .table-wrap-cl,
+#createsidebarATForm .input-butt-wrap-cl.addattr,
+#createsidebarATForm .input-butt-wrap-cl.save,
+#createsidebarATForm .input-butt-wrap-cl.sbm{
+	display: none;
+}
+
+
+/*
+ * 
+ * 
+ * media*
+ */
+.y-mindv{
+		display: none;
+	}
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+	/*
+	 * admin
+	 */
+	.no-mindv{
+		display: none;
+	}
+	
+	.y-mindv{
+		display: block;
+	}
+	/*
+	 * sites
+	 */
+}

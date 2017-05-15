@@ -22,7 +22,8 @@ public abstract class BaseManage extends Basic implements ResolvPath{
 	private static final String content = "content";
 	
 	private static final String sidebarContent = SideBarBean.getSidebarapp();
-	
+
+
 	public static String getContent() {
 		return content;
 	}

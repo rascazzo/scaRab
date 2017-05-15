@@ -8,8 +8,10 @@
 <xsl:template match="adminlayer">
 <html>
 <head>
+	<base href="/Scarab" target="_blank">	
 	<xsl:apply-templates select="heads">
 		<xsl:with-param name="context" select="'init'"></xsl:with-param>
+
 	</xsl:apply-templates>
 </head>
 <body>

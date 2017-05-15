@@ -5,16 +5,17 @@
 
 <xsl:template match="heads">
 	<xsl:param name="context"></xsl:param>
-	
-	
+
+
 	<xsl:apply-templates select="heads/head" mode="writeTag">
 		<xsl:with-param name="context" select="$context"></xsl:with-param>
+ 
 	</xsl:apply-templates>
 	
 	
 </xsl:template>
 
-	
+
 
 
 <xsl:template name="adminMenu">
@@ -23,7 +24,7 @@
 	<div class="ad-er-main-second-wrap">
 		<div class="ad-er-scarab-logo">
 			<a href="/app/administrator">
-			<img src="/images/path30035_2.png" />
+			<img src="/Scarab/outw?webfile=images/path30035_2.png" />
 			</a>
 		</div>
 		<div class="sc-main-title-cont">

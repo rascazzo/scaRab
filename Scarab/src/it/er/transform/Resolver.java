@@ -43,7 +43,7 @@ public class Resolver implements URIResolver{
 			if (filename.startsWith("/")){
 				s = new StreamSource(root + filename);
 			} else{
-				s = new StreamSource("./"+filename);
+				s = new StreamSource(root+ base +filename);
 			}
 				
 		} catch (Exception ex){

@@ -40,7 +40,7 @@ public class HeadHTML extends BasicDinamicHTMLContent implements AttributeTagMap
 	@Override
 	public List<GenericTag> offerToMapNewTagname(String tagname,
 			String attrName, String attrValue) {
-		GenericTag g = this.setGenericTag(attrValue, attrName);
+		GenericTag g = this.setGenericTag(BasicDinamicHTMLContent.outw+attrValue, attrName);
 		AttributeTagHTML lg = null;
 		lg = new AttributeTagHTML();
 		lg.getAttributes().add(g);
@@ -54,7 +54,7 @@ public class HeadHTML extends BasicDinamicHTMLContent implements AttributeTagMap
 	@Override
 	public List<GenericTag> offerToMapExistTagname(String tagname,
 			String attrName, String attrValue) {
-		GenericTag g = this.setGenericTag(attrValue, attrName);
+		GenericTag g = this.setGenericTag(BasicDinamicHTMLContent.outw+attrValue, attrName);
 		List<GenericTag> lg = null;
 		Iterator<String> i = this.head.iterator();
 		Integer lastIdx = null;

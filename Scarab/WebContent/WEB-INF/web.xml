@@ -43,7 +43,11 @@
     </init-param>
     <load-on-startup>2</load-on-startup>
   </servlet>
-   
+	
+  <servlet>
+     <servlet-name>ScarabOutWebServlet</servlet-name>
+     <servlet-class>it.er.outweb.ScarabOutWebServlet</servlet-class>	
+  </servlet>		   
   <servlet-mapping>
     <servlet-name>requestWebApp</servlet-name>
     <url-pattern>/app/*</url-pattern>
@@ -55,7 +59,10 @@
     <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet-mapping>
+    <servlet-name>ScarabOutWebServlet</servlet-name>
+    <url-pattern>/outw/*</url-pattern>		
+  </servlet-mapping>
   
   <session-config>
   	<session-timeout>30</session-timeout>

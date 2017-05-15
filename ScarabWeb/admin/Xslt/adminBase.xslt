@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/Scarab/outw?webfile=admin/css/bootstrap.min.css" rel="stylesheet"/>
 	<xsl:apply-templates select="heads">
 		<xsl:with-param name="context" select="'init'"></xsl:with-param>
 	</xsl:apply-templates>
@@ -52,7 +52,7 @@
 			</div>	 
 		</div>
 	</div>
-	<script src="js/bootstrap.min.js"></script>	
+	<script src="/Scarab/outw?webfile=admin/js/bootstrap.min.js"></script>	
 </body>
 </html>
 </xsl:template>
